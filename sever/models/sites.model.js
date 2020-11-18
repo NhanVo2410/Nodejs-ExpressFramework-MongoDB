@@ -1,4 +1,5 @@
-const mongoose= require('mongoose');
+const mongoose = require('mongoose');
+
 const siteSchema = new mongoose.Schema({
   // _id: mongoose.Schema.Types.ObjectId,
   organizationId: {
@@ -13,18 +14,11 @@ const siteSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  description: String,
+  event: Array,
+}, { timestamps: true });
 
-  description: {
-    type: String,
-    required: true,
-  },
-  created: {
-    type: Date,
-    default: Date.now
-  },
-});
-module.exports = mongoose.model('Sites',siteSchema);
-
+module.exports = mongoose.model('Sites', siteSchema);
 
 // import mongoose from 'mongoose';
 
@@ -43,8 +37,8 @@ module.exports = mongoose.model('Sites',siteSchema);
 // module.exports = {Site};
 
 // organizationId: Number,
-      // id: Number,
-      // name: String,
-      // description: String,
-      // created: Date.now
-      // { timestamps: true }
+// id: Number,
+// name: String,
+// description: String,
+// created: Date.now
+// { timestamps: true }
