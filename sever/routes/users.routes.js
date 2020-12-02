@@ -9,5 +9,6 @@ router.get('/:id', user.GetSiteByID);
 router.post('/', user.Post);
 router.put('/:id', user.Put);
 router.delete('/:id', user.Delete);
+router.get('/get-ticket-by-time', user.GetUserByTime);
 
 module.exports = router;
